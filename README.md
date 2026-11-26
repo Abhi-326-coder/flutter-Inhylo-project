@@ -45,6 +45,22 @@ flutter devices
 flutter run -d <device-id>
 ```
 
+## Publish a live demo with GitHub Pages
+
+This repository includes a GitHub Actions workflow that builds the Flutter web app and deploys it to GitHub Pages whenever changes are pushed to `main`. The live project URL is:
+
+**https://abhi-326-coder.github.io/flutter-Inhylo-project/**
+
+To enable the first deployment:
+
+1. Push this project, including `.github/workflows/deploy-pages.yml`, to the `main` branch of `Abhi-326-coder/flutter-Inhylo-project`.
+2. On GitHub, open the repository and select **Settings → Pages**.
+3. Under **Build and deployment → Source**, choose **GitHub Actions**.
+4. Open the **Actions** tab and wait for **Deploy Flutter web to GitHub Pages** to finish successfully.
+5. Open the project URL above and share it.
+
+After setup, each push to `main` publishes an updated demo. You do not need to upload `build/web` manually; the workflow builds it with the correct repository subpath. The repository must be public to use GitHub Pages on GitHub Free. See [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) for GitHub's deployment details.
+
 ## Validate changes
 
 Run these commands from the project root:
